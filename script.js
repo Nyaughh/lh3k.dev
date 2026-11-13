@@ -1,5 +1,5 @@
-// lh3k.dev: the address bar types itself, and star counts come from GitHub
-// on each visit.
+// lh3k.dev: the address bar types itself, the jobs open like browser tabs,
+// and star counts come from GitHub on each visit.
 
 const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -14,6 +14,32 @@ if (addr && !calm) {
     if (i < text.length) setTimeout(type, 55 + Math.random() * 70);
   };
   setTimeout(type, 500);
+}
+
+// ---- where I've worked: one job showing at a time, like browser tabs ----
+const jobs = document.getElementById('jobs');
+if (jobs) {
+  const tabs = [...jobs.querySelectorAll('[role="tab"]')];
+  const open = (tab, focus) => {
+    for (const each of tabs) {
+      const on = each === tab;
+      each.setAttribute('aria-selected', on);
+      each.tabIndex = on ? 0 : -1;
+      document.getElementById(each.getAttribute('aria-controls')).hidden = !on;
+    }
+    if (focus) tab.focus();
+    tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  };
+  jobs.classList.add('tabbed');
+  for (const each of tabs) each.addEventListener('click', () => open(each));
+  jobs.querySelector('[role="tablist"]').addEventListener('keydown', (e) => {
+    const at = tabs.indexOf(document.activeElement);
+    const to = { ArrowRight: at + 1, ArrowLeft: at - 1, Home: 0, End: tabs.length - 1 }[e.key];
+    if (at < 0 || to === undefined) return;
+    e.preventDefault();
+    open(tabs[(to + tabs.length) % tabs.length], true);
+  });
+  for (const each of tabs.slice(1)) document.getElementById(each.getAttribute('aria-controls')).hidden = true;
 }
 
 // ---- live star counts ----
