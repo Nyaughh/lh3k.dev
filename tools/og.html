@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- The link preview picture. Serve the site, open this page at 1200x630,
+     and save a screenshot as ../og.png. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    html, body { width: 1200px; height: 630px; overflow: hidden; }
+    .hero { height: 630px; }
+    .stage { max-width: 860px; padding: 178px 0 0; }
+    .page { padding: 34px 40px 40px; }
+    .page img { width: 600px; }
+    .url { font-size: 18px; flex-basis: 340px; }
+    .buddy { width: 160px; top: -175px; }
+    .p1 { top: 22%; left: 5%; height: 104px; }
+    .p2 { top: 50%; right: 4%; height: 96px; }
+    .p3 { top: 12%; right: 6%; height: 76px; }
+    .p4 { bottom: 10%; left: 5%; height: 92px; }
+    * { animation: none !important; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="petals">
+      <img class="petal p1" src="/assets/doodles/flower.png" alt="">
+      <img class="petal p2" src="/assets/doodles/heart.png" alt="">
+      <img class="petal p3" src="/assets/doodles/star.png" alt="">
+      <img class="petal p4" src="/assets/doodles/strawberry.png" alt="">
+    </div>
+    <main class="stage">
+      <div class="window-wrap">
+        <img class="buddy" src="/assets/chiikawa.png" alt="">
+        <section class="window">
+          <div class="bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="url">localhost:3000</span>
+          </div>
+          <div class="page"><img src="/assets/nyaarin.webp" alt=""></div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

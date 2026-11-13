@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>nyaughh · lh3k.dev</title>
+  <meta name="description" content="Nyaarin's corner of the internet: small, cute apps, started on localhost:3000.">
+  <meta name="theme-color" content="#FFD0DE">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lh3k.dev/">
+  <meta property="og:title" content="nyaughh · lh3k.dev">
+  <meta property="og:description" content="Small, cute apps, started on localhost:3000.">
+  <meta property="og:image" content="https://lh3k.dev/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@Nyaughh_">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="hero">
+    <header class="nav">
+      <a class="brand" href="/" aria-label="lh3k.dev, home">
+        <img src="/favicon.png" width="34" height="34" alt="">
+        <span>lh3k.dev</span>
+      </a>
+    </header>
+
+    <div class="petals" aria-hidden="true">
+      <img class="petal p1" src="/assets/doodles/flower.png" width="249" height="384" alt="">
+      <img class="petal p2" src="/assets/doodles/heart.png" width="303" height="384" alt="">
+      <img class="petal p3" src="/assets/doodles/star.png" width="384" height="384" alt="">
+      <img class="petal p4" src="/assets/doodles/strawberry.png" width="255" height="384" alt="">
+      <img class="petal p5" src="/assets/doodles/notes.png" width="282" height="384" alt="">
+      <img class="petal p6" src="/assets/doodles/heart.png" width="303" height="384" alt="">
+    </div>
+
+    <main class="stage">
+      <div class="window-wrap">
+        <img class="buddy" src="/assets/chiikawa.png" width="193" height="223" alt="Chiikawa standing on top of the window">
+
+        <section class="window">
+          <div class="bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="url" aria-label="Address bar showing localhost:3000">
+              <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2M3.5 7h9v6.5h-9z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></svg>
+              <span id="addr">localhost:3000</span><span class="caret" aria-hidden="true"></span>
+            </span>
+          </div>
+          <h1 class="page"><img src="/assets/nyaarin.webp" width="1500" height="610" alt="Nyaarin"></h1>
+        </section>
+      </div>
+    </main>
+    <div class="scallop" aria-hidden="true"></div>
+  </div>
+
+  <section class="projects" id="projects" aria-labelledby="projTitle">
+    <h2 class="title" id="projTitle">Things I've made</h2>
+
+    <div class="grid">
+      <article class="card" style="--tint:#e1d3f7">
+        <div class="mini"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mini-url">thock.lh3k.dev</span></div>
+        <div class="body">
+          <img class="icon" src="/assets/thock.svg" width="64" height="64" alt="">
+          <div>
+            <h3>thock</h3>
+            <p>Your phone as a full-screen mechanical keyboard and trackpad. Pairs over Bluetooth, sounds like real switches.</p>
+          </div>
+        </div>
+        <div class="foot">
+          <span class="chip">Android</span><span class="chip star" data-stars="thock" hidden></span>
+          <span class="links"><a href="https://thock.lh3k.dev">Visit</a><a href="https://github.com/Nyaughh/thock">Code</a></span>
+        </div>
+      </article>
+
+      <article class="card" style="--tint:#ffe3ec">
+        <div class="mini"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mini-url">github.com/Nyaughh/little-fm</span></div>
+        <div class="body">
+          <span class="icon doodle"><img src="/assets/doodles/cat-ink.png" width="226" height="200" alt=""></span>
+          <div>
+            <h3>little fm</h3>
+            <p>Your friends' latest Last.fm songs, in hand-drawn widgets on your home screen.</p>
+          </div>
+        </div>
+        <div class="foot">
+          <span class="chip">Android</span><span class="chip star" data-stars="little-fm" hidden></span>
+          <span class="links"><a href="https://github.com/Nyaughh/little-fm/releases/latest">Download</a><a href="https://github.com/Nyaughh/little-fm">Code</a></span>
+        </div>
+      </article>
+
+      <article class="card" style="--tint:#cdeedd">
+        <div class="mini"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mini-url">github.com/Nyaughh/t2chat</span></div>
+        <div class="body">
+          <span class="icon doodle"><img src="/assets/doodles/alien-face-ink.png" width="345" height="384" alt=""></span>
+          <div>
+            <h3>t2chat</h3>
+            <p>An open-source AI chat app. You keep your own conversations and choose your own models.</p>
+          </div>
+        </div>
+        <div class="foot">
+          <span class="chip">Web</span><span class="chip star" data-stars="t2chat" hidden></span>
+          <span class="links"><a href="https://github.com/Nyaughh/t2chat">Code</a></span>
+        </div>
+      </article>
+
+      <article class="card" style="--tint:#d5e6fb">
+        <div class="mini"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mini-url">github.com/Nyaughh/roomsync</span></div>
+        <div class="body">
+          <span class="icon doodle"><img src="/assets/doodles/spiral-ink.png" width="324" height="384" alt=""></span>
+          <div>
+            <h3>roomsync</h3>
+            <p>Plays your Windows PC's sound through several Android phones at once, in time, over Wi-Fi. An early prototype.</p>
+          </div>
+        </div>
+        <div class="foot">
+          <span class="chip">Windows + Android</span><span class="chip star" data-stars="roomsync" hidden></span>
+          <span class="links"><a href="https://github.com/Nyaughh/roomsync">Code</a></span>
+        </div>
+      </article>
+
+      <article class="card" style="--tint:#fff0bd">
+        <div class="mini"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mini-url">github.com/Nyaughh/wa-fm-bot</span></div>
+        <div class="body">
+          <span class="icon doodle"><img src="/assets/doodles/notes-ink.png" width="282" height="384" alt=""></span>
+          <div>
+            <h3>wa-fm-bot</h3>
+            <p>A WhatsApp bot that tells the group chat what you're listening to on Last.fm.</p>
+          </div>
+        </div>
+        <div class="foot">
+          <span class="chip">Bot</span><span class="chip star" data-stars="wa-fm-bot" hidden></span>
+          <span class="links"><a href="https://github.com/Nyaughh/wa-fm-bot">Code</a></span>
+        </div>
+      </article>
+
+      <article class="card" style="--tint:#ffdcc7">
+        <div class="mini"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mini-url">verceiptify.vercel.app</span></div>
+        <div class="body">
+          <span class="icon doodle"><img src="/assets/doodles/star-ink.png" width="384" height="384" alt=""></span>
+          <div>
+            <h3>verceiptify</h3>
+            <p>Vercel receipts: your Vercel stats, printed like a till receipt.</p>
+          </div>
+        </div>
+        <div class="foot">
+          <span class="chip">Web</span><span class="chip star" data-stars="verceiptify" hidden></span>
+          <span class="links"><a href="https://verceiptify.vercel.app">Visit</a><a href="https://github.com/Nyaughh/verceiptify">Code</a></span>
+        </div>
+      </article>
+    </div>
+
+    <p class="more"><a href="https://github.com/Nyaughh?tab=repositories">Everything else is on GitHub</a></p>
+  </section>
+
+
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
