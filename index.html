@@ -17,14 +17,14 @@
   <meta name="twitter:creator" content="@Nyaughh_">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <div class="hero">
     <header class="nav">
       <a class="brand" href="/" aria-label="lh3k.dev, home">
-        <img src="/favicon.png" width="34" height="34" alt="">
+        <img src="/assets/pfp.jpg" width="34" height="34" alt="">
         <span>lh3k.dev</span>
       </a>
     </header>
@@ -40,6 +40,7 @@
 
     <main class="stage">
       <div class="window-wrap">
+        <img class="buddy left" src="/assets/hachiware.png" width="192" height="237" alt="Hachiware standing on top of the window">
         <img class="buddy" src="/assets/chiikawa.png" width="193" height="223" alt="Chiikawa standing on top of the window">
 
         <section class="window">
@@ -159,11 +160,11 @@
     <h2 class="title" id="workTitle">Where I've worked</h2>
     <ol class="timeline">
       <li class="stop">
-        <img class="pin" src="/assets/doodles/heart.png" width="303" height="384" alt="">
+        <span class="pin" aria-hidden="true"></span>
         <div class="stop-head">
+          <p class="when">Sep 2025 – Present</p>
           <h3><a href="https://extraordinary.com">Extraordinary</a></h3>
           <p class="role">Software Development Engineer</p>
-          <p class="when">Sep 2025 – Present</p>
         </div>
         <ul>
           <li>Built features for marketing, legal and invoicing platforms</li>
@@ -172,11 +173,11 @@
         </ul>
       </li>
       <li class="stop">
-        <img class="pin" src="/assets/doodles/star.png" width="384" height="384" alt="">
+        <span class="pin" aria-hidden="true"></span>
         <div class="stop-head">
+          <p class="when">Oct 2024 – Present</p>
           <h3><a href="https://kmrb.tech">Komorebi</a></h3>
           <p class="role">Founder</p>
-          <p class="when">Oct 2024 – Present</p>
         </div>
         <ul>
           <li>Komorebi is a software development agency</li>
@@ -185,11 +186,11 @@
         </ul>
       </li>
       <li class="stop">
-        <img class="pin" src="/assets/doodles/flower.png" width="249" height="384" alt="">
+        <span class="pin" aria-hidden="true"></span>
         <div class="stop-head">
+          <p class="when">Nov 2024 – Jan 2025</p>
           <h3><a href="https://prgn.gg">Paragon</a></h3>
           <p class="role">Web Developer</p>
-          <p class="when">Nov 2024 – Jan 2025</p>
         </div>
         <ul>
           <li>Paragon is the community manager at Discord for VALORANT</li>
@@ -198,11 +199,11 @@
         </ul>
       </li>
       <li class="stop">
-        <img class="pin" src="/assets/doodles/strawberry.png" width="255" height="384" alt="">
+        <span class="pin" aria-hidden="true"></span>
         <div class="stop-head">
+          <p class="when">Jan 2024 – Oct 2024</p>
           <h3>Synthesized Infinity</h3>
           <p class="role">Software Developer Intern</p>
-          <p class="when">Jan 2024 – Oct 2024</p>
         </div>
         <ul>
           <li>Contributed to the development of multiple websites</li>
@@ -212,11 +213,11 @@
     </ol>
   </section>
 
-  <footer class="dock" aria-label="Find me">
-    <a href="https://github.com/Nyaughh" aria-label="GitHub" style="--c:var(--rose)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.4 9.6 8.1 11.1.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.5-1.8-1.5-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 1.4 2 1.4 1.1 1.9 2.9 1.4 3.6 1.1.1-.8.4-1.4.7-1.8-2.7-.3-5.6-1.4-5.6-6.1 0-1.4.5-2.5 1.3-3.4-.1-.3-.6-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.7 11.7 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3.7 1.7.2 3 .1 3.3.8.9 1.3 2 1.3 3.4 0 4.7-2.9 5.8-5.6 6.1.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.7-1.5 8.1-5.9 8.1-11.1A11.5 11.5 0 0 0 12 .5Z"/></svg></a>
-    <a href="https://www.linkedin.com/in/aarin-arora-8538b825b" aria-label="LinkedIn" style="--c:var(--mint)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1 5 2.1 5 3.5zM.5 8.5h4V23h-4zM8.5 8.5h3.8v2h.1c.5-.9 1.8-2.1 3.8-2.1 4 0 4.7 2.6 4.7 6V23h-4v-6.5c0-1.6 0-3.7-2.3-3.7s-2.7 1.7-2.7 3.6V23h-4z"/></svg></a>
-    <a href="https://x.com/Nyaughh_" aria-label="X (Twitter)" style="--c:var(--butter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-    <a href="mailto:nyaughh@gmail.com" aria-label="Email" style="--c:#e1d3f7"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+  <footer class="find" aria-label="Find me">
+    <a href="https://github.com/Nyaughh" aria-label="GitHub" style="--c:#e2dbf3;--g:#4b3a73"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.4 9.6 8.1 11.1.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.5-1.8-1.5-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 1.4 2 1.4 1.1 1.9 2.9 1.4 3.6 1.1.1-.8.4-1.4.7-1.8-2.7-.3-5.6-1.4-5.6-6.1 0-1.4.5-2.5 1.3-3.4-.1-.3-.6-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.7 11.7 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3.7 1.7.2 3 .1 3.3.8.9 1.3 2 1.3 3.4 0 4.7-2.9 5.8-5.6 6.1.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.7-1.5 8.1-5.9 8.1-11.1A11.5 11.5 0 0 0 12 .5Z"/></svg></a>
+    <a href="https://www.linkedin.com/in/aarin-arora-8538b825b" aria-label="LinkedIn" style="--c:#cfe3fa;--g:#1f5a99"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1 5 2.1 5 3.5zM.5 8.5h4V23h-4zM8.5 8.5h3.8v2h.1c.5-.9 1.8-2.1 3.8-2.1 4 0 4.7 2.6 4.7 6V23h-4v-6.5c0-1.6 0-3.7-2.3-3.7s-2.7 1.7-2.7 3.6V23h-4z"/></svg></a>
+    <a href="https://x.com/Nyaughh_" aria-label="X (Twitter)" style="--c:#e4e1e6;--g:#2f2a33"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="mailto:nyaughh@gmail.com" aria-label="Email" style="--c:#ffd8d1;--g:#b8443a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
   </footer>
 
 
