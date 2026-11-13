@@ -39,27 +39,6 @@ img { max-width: 100%; height: auto; }
   background-size: 52px 52px;
 }
 
-.nav {
-  position: relative;
-  z-index: 5;
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 20px 20px 0;
-}
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 5px 14px 5px 6px;
-  font: 500 16px var(--mono);
-  text-decoration: none;
-  background: var(--paper);
-  border: 2.5px solid var(--ink);
-  border-radius: 999px;
-  box-shadow: 0 4px 0 var(--ink);
-}
-.brand img { display: block; width: 34px; height: 34px; border-radius: 50%; }
-
 /* hand-drawn doodles from little fm, scattered on the gingham */
 .petals { position: absolute; inset: 0; pointer-events: none; }
 .petal { position: absolute; width: auto; max-width: none; animation: bob 6s ease-in-out infinite; }
@@ -79,7 +58,7 @@ img { max-width: 100%; height: auto; }
   z-index: 2;
   max-width: 860px;
   margin: 0 auto;
-  padding: 150px 20px 84px;
+  padding: 204px 20px 84px;
 }
 .window-wrap { position: relative; }
 
@@ -230,14 +209,37 @@ img.icon { display: block; }
 }
 .chip.star { background: var(--butter); border-color: #eccf6c; }
 .links { display: flex; gap: 14px; margin-left: auto; }
-.links a { font-weight: 800; font-size: 15px; text-decoration: underline; text-decoration-color: var(--rose); text-decoration-thickness: 2.5px; text-underline-offset: 4px; }
-.links a:hover { text-decoration-color: var(--hot); }
+.links a { font-weight: 800; font-size: 15px; text-decoration: none; transition: color .12s; }
+.links a:hover { color: var(--hot); }
 .more { margin-top: 36px; font-weight: 700; }
-.more a { text-decoration-color: var(--rose); text-decoration-thickness: 2.5px; text-underline-offset: 4px; }
+.more a { text-decoration: none; transition: color .12s; }
+.more a:hover { color: var(--hot); }
 
-/* ---------- where I've worked: a plain timeline ---------- */
+/* ---------- where I've worked: a plain timeline on its own band ---------- */
 
-.work { max-width: 880px; margin: 0 auto; padding: 10px 20px 40px; text-align: center; }
+.band {
+  --band: #efe8fb;
+  position: relative;
+  margin-top: 30px;
+  padding: 34px 0 58px;
+  background-color: var(--band);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .45) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(255, 255, 255, .45) 50%, transparent 50%);
+  background-size: 52px 52px;
+}
+.band::before, .band::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 26px;
+  background-size: 44px 26px;
+  background-repeat: repeat-x;
+}
+.band::before { top: 0; background-image: radial-gradient(circle at 22px -4px, var(--cream) 22px, transparent 23px); }
+.band::after { bottom: 0; background-image: radial-gradient(circle at 22px 30px, var(--cream) 22px, transparent 23px); }
+
+.work { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 40px 20px; text-align: center; }
 .timeline {
   position: relative;
   margin: 46px 0 0;
@@ -249,10 +251,8 @@ img.icon { display: block; }
   content: '';
   position: absolute;
   top: 10px; bottom: 6px; left: 50%;
-  width: 2px;
-  margin-left: -1px;
-  background: var(--line);
-  border-radius: 2px;
+  margin-left: -1.5px;
+  border-left: 3px dashed var(--rose);
 }
 .stop {
   position: relative;
@@ -270,7 +270,7 @@ img.icon { display: block; }
   background: var(--rose);
   border: 2.5px solid var(--ink);
   border-radius: 50%;
-  box-shadow: 0 0 0 5px var(--cream);     /* a gap in the line around the dot */
+  box-shadow: 0 0 0 4px var(--band);     /* a gap in the dashes around the dot */
 }
 .stop-head { text-align: right; }
 .when { font: 400 13px/1.9 var(--mono); letter-spacing: .01em; color: var(--soft); }
@@ -297,7 +297,7 @@ img.icon { display: block; }
 
 @media (max-width: 720px) {
   .timeline { margin-top: 36px; }
-  .timeline::before { left: 7px; }
+  .timeline::before { left: 7.5px; }
   .stop { grid-template-columns: 1fr; gap: 10px; padding: 0 0 40px 34px; }
   .pin { left: 7px; }
   .stop-head { text-align: left; }
@@ -310,7 +310,7 @@ img.icon { display: block; }
   display: flex;
   justify-content: center;
   gap: 14px;
-  padding: 44px 20px 56px;
+  padding: 30px 20px 52px;
 }
 .find a {
   display: grid;
@@ -324,12 +324,12 @@ img.icon { display: block; }
 }
 .find a:hover { transform: translateY(-3px); box-shadow: 0 8px 0 var(--ink); }
 .find a:active { transform: translateY(5px); box-shadow: 0 0 0 var(--ink); }
-.find svg { width: 23px; height: 23px; fill: var(--g); }
+.find svg { width: 23px; height: 23px; fill: var(--ink); }
 
 /* ---------- small screens ---------- */
 
 @media (max-width: 720px) {
-  .stage { padding: 142px 16px 66px; }
+  .stage { padding: 150px 16px 66px; }
   .buddy { width: 108px; top: -119px; right: 6%; }
   .buddy.left { left: 6%; top: -125px; }
   .p1 { top: 21%; left: 3%; height: 58px; }
@@ -340,7 +340,6 @@ img.icon { display: block; }
   .p6 { display: none; }
 }
 @media (max-width: 380px) {
-  .nav { padding: 16px 14px 0; }
   .dots i { width: 11px; height: 11px; }
   .bar { gap: 10px; padding: 10px 12px; }
 }
